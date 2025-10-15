@@ -1,7 +1,19 @@
-<h1><%= @product.name %></h1>
+<div class="max-w-4xl mx-auto">
+  <div class="bg-white rounded-lg shadow-md p-8">
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold mb-4"><%= @product.name %></h1>
+    </div>
 
-<%= link_to "Back", products_path %>
-<%= link_to "Edit", edit_product_path(@product) %>
-<%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+    <div class="flex gap-3 pt-4 border-t">
+      <%= link_to "Back", products_path, 
+          class: "bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded font-medium" %>
+      <%= link_to "Edit", edit_product_path(@product), 
+          class: "bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded font-medium" %>
+      <%= button_to "Delete", @product, method: :delete, 
+          data: { turbo_confirm: "Are you sure?" },
+          class: "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-medium" %>
+    </div>
+  </div>
+</div>
 
 

@@ -1,16 +1,10 @@
-<h1>New product</h1>
-
-<%= render "form", product: @product %>
-<%= link_to "Cancel", products_path %>
-
-
-<%# <%= form_with model: @product do |form| %>
-  <%# <div> %>
-    <%# <%= form.label :name %> 
-    <%# <%= form.text_field :name %> 
-  <%# </div> %>
-
-  <%# <div> %>
-    <%# <%= form.submit %> 
-  <%# </div> %>
-<%# <% end %> 
+<div class="max-w-2xl mx-auto">
+  <h1 class="text-3xl font-bold mb-6">New product</h1>
+  
+  <%= render "form", product: @product %>
+  
+  <div class="mt-4">
+    <%= link_to "Cancel", products_path, 
+        class: "bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded font-medium inline-block" %>
+  </div>
+</div>
